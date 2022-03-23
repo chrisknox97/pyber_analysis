@@ -54,6 +54,8 @@ We were also concerned about the total weekly fares by city type from January 20
 
 	  Create a New DataFrame Showing Sum of Fares and Indexing for City Type & Date
 	  sum_fares_by_type = pyber_data_df.groupby([“type, “date”]).sum[“fare”]
+	  
+![Sum Fares DataFrame](https://github.com/chrisknox97/pyber_analysis/blob/main/Tables/Sum%20Fares%20by%20Type%20Date%20DataFrame.png)
 
 We then used this data to create a Pivot Table using ``pivot()`` to format our new data for clarity and visual appeal, and using ``loc()`` to limit our data from January 1, 2019 until April 29, 2019. 
 
@@ -69,6 +71,8 @@ The result shows a table displaying each day’s daily fares by city type. But w
 
     Limit the Pivot Table Scope to Specified Dates
     jan_april_2019_fares_df = total_fares_pivot_table.loc[‘2019-01-01’ : ‘2019-04-29’]
+    
+![Pyber LOC](https://github.com/chrisknox97/pyber_analysis/blob/main/Tables/Pivot%20Table%20LOC.png)
 
     Use Resample() to Reformat the Dates into Weekly Totals
     jan_april_2019_fares_weekly = jan_april_2019_df.resample(‘W’).sum()
