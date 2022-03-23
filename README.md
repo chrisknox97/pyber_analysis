@@ -73,7 +73,8 @@ The result shows a table displaying each day’s daily fares by city type. But w
     Use Resample() to Reformat the Dates into Weekly Totals
     jan_april_2019_fares_weekly = jan_april_2019_df.resample(‘W’).sum()
 
-![Pivot Two](https://github.com/chrisknox97/pyber_analysis/blob/main/Tables/Pivot%20Table%20Fares%20Weekly.png)
+
+<img src="https://github.com/chrisknox97/pyber_analysis/blob/main/Tables/Pivot%20Table%20Fares%20Weekly.png"  height="400">
 
 By doing this, we now have the correct  data from which we can plot the total weekly fares by city type onto a multiple line chart. 
 
