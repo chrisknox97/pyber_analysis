@@ -23,9 +23,9 @@ The results of these tabulations found that the highest totals in each field wer
 
 <p float="left">
 
-<img src="https://github.com/chrisknox97/pyber_analysis/blob/main/Tables/Total%20Rides%20by%20City%20Type.png" width ="200" height="200">
-<img src="https://github.com/chrisknox97/pyber_analysis/blob/main/Tables/Total%20Drivers%20by%20City%20Type.png" width ="200" height="200">
-<img src="https://github.com/chrisknox97/pyber_analysis/blob/main/Tables/Total%20Fares%20by%20City%20Type.png" width ="200" height="200">
+<img src="https://github.com/chrisknox97/pyber_analysis/blob/main/Tables/Total%20Rides%20by%20City%20Type.png" width ="200" height="300">
+<img src="https://github.com/chrisknox97/pyber_analysis/blob/main/Tables/Total%20Drivers%20by%20City%20Type.png" width ="200" height="300">
+<img src="https://github.com/chrisknox97/pyber_analysis/blob/main/Tables/Total%20Fares%20by%20City%20Type.png" width ="200" height="300">
 	
 </p>
 
@@ -39,8 +39,8 @@ These new totals were then used to calculate the average fare per ride and per d
 	  
 <p float="left">
 	
-<img src="https://github.com/chrisknox97/pyber_analysis/blob/main/Tables/Average%20Fare%20by%20Ride.png" width ="200" height="200">
-<img src="https://github.com/chrisknox97/pyber_analysis/blob/main/Tables/Average%20Fare%20by%20Driver.png" width ="200" height="200">
+<img src="https://github.com/chrisknox97/pyber_analysis/blob/main/Tables/Average%20Fare%20by%20Ride.png" width ="200" height="300">
+<img src="https://github.com/chrisknox97/pyber_analysis/blob/main/Tables/Average%20Fare%20by%20Driver.png" width ="200" height="300">
 
 </p>
 
