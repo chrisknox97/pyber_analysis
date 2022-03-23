@@ -63,6 +63,8 @@ We then use this data to create a Pivot Table using ``pivot()`` to format our ne
 	  Create a Pivot Table, Indexing for Date, With Columns for City Type & Fares as Values
 	  total_fares_pivot_table =pyber_data_df.pivot( index= ‘date’, columns= ‘type’, values= ‘fare’)
 
+![Pivot One](https://github.com/chrisknox97/pyber_analysis/blob/main/Tables/Pivot%20Table%20Fares%20by%20City%20Date.png)
+
 The result shows a table displaying each day’s daily fares by city type. But we still need to limit our intended scope to January 2019 through April 2019 and use our daily totals to calculate new weekly totals. 
 
     Limit the Pivot Table Scope to Specified Dates
@@ -70,6 +72,8 @@ The result shows a table displaying each day’s daily fares by city type. But w
 
     Use Resample() to Reformat the Dates into Weekly Totals
     jan_april_2019_fares_weekly = jan_april_2019_df.resample(‘W’).sum()
+
+![Pivot Two](https://github.com/chrisknox97/pyber_analysis/blob/main/Tables/Pivot%20Table%20Fares%20Weekly.png)
 
 By doing this, we now have the correct  data from which we can plot the total weekly fares by city type onto a multiple line chart. 
 
@@ -84,6 +88,8 @@ By doing this, we now have the correct  data from which we can plot the total we
 	Plt.title (“Total Fare by City Type”)
 	Plt.ylable (“Fare ($USD)” )
 	Plt.xlabel (“Month”)
+	
+![Pyber Graph](https://github.com/chrisknox97/pyber_analysis/blob/main/Analysis/PyBer_fare_summary.png)
 
 By adding these features we see that, regardless of the month, Urban total weekly fares tend to be the highest, and Rural total weekly fares tend to be the lowest. The chart also shows that slight increases in total weekly fares across all city types in late February and slight decreases in Urban and Suburban fares around late March and early April. 
 
