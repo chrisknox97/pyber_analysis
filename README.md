@@ -2,7 +2,7 @@
 
 ## Overview of Analysis
 
-### To utilize ``groupby()`` functions  to create a data summary from Pyber’s ride-sharing data highlighting the total rides, total drivers, total fares, and average fare by ride and per driver based on city type. As well as to use ``Matplotlib`` charting capabilities to visually display the total weekly fares in three city types (rural, suburban, and urban) over a period spanning January 2019 until April 2019. 
+### To utilize ``groupby()`` functions  to create a data summary from Pyber’s ride-sharing data that highlights the total rides, total drivers, total fares, and average fare by ride and per driver based on city type. As well as to use ``Matplotlib`` charting capabilities to visually display the total weekly fares in three city types (rural, suburban, and urban) over a period spanning January 2019 until April 2019. 
 
 ## Pyber Ride-Sharing Results
 
