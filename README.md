@@ -2,15 +2,15 @@
 
 ## Overview of Analysis
 
-### To utilize groupby() functions  to create a data summary from Pyber’s ride-sharing data to highlight the total rides, total drivers, total fares, and average fare by ride and per driver based on city type. As well as to use Matplotlib charting capabilities to visually display the total weekly fares in three city types (rural, suburban, and urban) over a period spanning January 2019 until April 2019. 
+### To utilize ``groupby()`` functions  to create a data summary from Pyber’s ride-sharing data to highlight the total rides, total drivers, total fares, and average fare by ride and per driver based on city type. As well as to use ``Matplotlib`` charting capabilities to visually display the total weekly fares in three city types (rural, suburban, and urban) over a period spanning January 2019 until April 2019. 
 
 ## Pyber Ride-Sharing Results
 
 ### Calculating The Average Fares Per Rider & Per Driver
 
-To calculate the average fares per rider and per driver type, we first had to tabulate our total rides, total drivers, and total fares (sorting by city type) using groupy() against our data frames. The scripts for these tabulations are shown below: 
+To calculate the average fares per rider and per driver type, we first had to tabulate our total rides, total drivers, and total fares (sorting by city type) using ``groupy()`` against our data frames. The scripts for these tabulations are shown below: 
 
-    Tabulate the Total Rides for Each City Type
+	  Tabulate the Total Rides for Each City Type
 	  rides_by_type = pyber_data_df.groupby([“type’]).count()[“ride_id”]
 
 	  Tabulate the Total Drivers for Each City Type
@@ -21,6 +21,14 @@ To calculate the average fares per rider and per driver type, we first had to ta
 
 The results of these tabulations found that the highest totals in each field were in urban city types, with the lowest being in rural areas. 
 
+<p float="left">
+
+	<img src="https://github.com/chrisknox97/pyber_analysis/blob/main/Tables/Total%20Rides%20by%20City%20Type.png" width ="200" height="200">
+	<img src="https://github.com/chrisknox97/pyber_analysis/blob/main/Tables/Total%20Drivers%20by%20City%20Type.png" width ="200" height="200">
+	<img src="https://github.com/chrisknox97/pyber_analysis/blob/main/Tables/Total%20Fares%20by%20City%20Type.png" width ="200" height="200">
+	
+</p>
+
 These new totals were then used to calculate the average fare per ride and per driver using the following script:
 
 	  Calculate the Average Fare by Ride
@@ -28,17 +36,26 @@ These new totals were then used to calculate the average fare per ride and per d
 
 	  Calculate the Average Fare by Driver
 	  avg_fare_per_driver = sum_fares_by_type / drivers_by_type
+	  
+<p float="left">
+	
+	<img src="https://github.com/chrisknox97/pyber_analysis/blob/main/Tables/Average%20Fare%20by%20Ride.png" width ="200" height="200">
+	<img src="https://github.com/chrisknox97/pyber_analysis/blob/main/Tables/Average%20Fare%20by%20Driver.png" width ="200" height="200">
+
+</p>
 
 These calculations found that while rural areas had the lowest total rides, drivers, and total fares; the decreased competition and presumably further distances between destinations contributed to the highest average fares per driver and ride of all the city types. 
 
+![Deliverable One](https://github.com/chrisknox97/pyber_analysis/blob/main/Tables/Deliverable%201.png)
+
 ### Total Weekly Fares
 
-We were also concerned about the total weekly fares by city type from January 2019 until April 2019. First we had to use groupby() to sort for weekly fares by city type and date, creating a new data frame the limited our data to the aforementioned essentials. 
+We were also concerned about the total weekly fares by city type from January 2019 until April 2019. First we had to use ``groupby()`` to sort for weekly fares by city type and date, creating a new data frame the limited our data to the aforementioned essentials. 
 
 	  Create a New DataFrame Showing Sum of Fares and Indexing for City Type & Date
 	  sum_fares_by_type = pyber_data_df.groupby([“type, “date”]).sum[“fare”]
 
-We then use this data to create a Pivot Table using pivot() to format our new data for clarity and visual appeal, and using loc() to limit our data from January 1, 2019 until April 29, 2019. 
+We then use this data to create a Pivot Table using ``pivot()`` to format our new data for clarity and visual appeal, and using ``loc()`` to limit our data from January 1, 2019 until April 29, 2019. 
 
 	  Reset the Index
 	  pyber_data_df = pyber_data_df.reset_index()
