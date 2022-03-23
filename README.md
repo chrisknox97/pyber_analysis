@@ -46,7 +46,7 @@ These new totals were then used to calculate the average fare per ride and per d
 
 These calculations found that while rural areas had the lowest total rides, drivers, and total fares; the decreased competition and presumably further distances between destinations contributed to the highest average fares per driver and ride of all the city types. 
 
-![Deliverable One](https://github.com/chrisknox97/pyber_analysis/blob/main/Tables/Deliverable%201.png)
+<img src="https://github.com/chrisknox97/pyber_analysis/blob/main/Tables/Deliverable%201.png" width ="300" height="250">
 
 ### Total Weekly Fares
 
