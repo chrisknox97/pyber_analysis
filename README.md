@@ -8,7 +8,7 @@
 
 ### Calculating Average Fares
 
-To calculate the average fares per rider and per driver type, we first had to tabulate our total rides, total drivers, and total fares (sorting by city type) using ``groupy()`` against our data frames. The scripts for these tabulations are shown below: 
+To calculate the average fares per rider and per driver based on city type; we first had to tabulate our total rides, total drivers, and total fares (sorting by city type) using ``groupy()`` against our data frames. The scripts for these tabulations are shown below: 
 
 	  Tabulate the Total Rides for Each City Type
 	  rides_by_type = pyber_data_df.groupby([“type’]).count()[“ride_id”]
@@ -44,18 +44,18 @@ These new totals were then used to calculate the average fare per ride and per d
 
 </p>
 
-These calculations found that while rural areas had the lowest total rides, drivers, and total fares; the decreased competition and presumably further distances between destinations contributed to the highest average fares per driver and ride of all the city types. 
+These calculations found that while rural areas had the lowest total rides, drivers, and total fares; the decreased competition and presumably further distances between destinations contributed to the highest average fares per driver and per ride of all the city types. 
 
-![Pyber Graph](https://github.com/chrisknox97/pyber_analysis/blob/main/Tables/Deliverable%201.png)
+![Deliverable One](https://github.com/chrisknox97/pyber_analysis/blob/main/Tables/Deliverable%201.png)
 
 ### Total Weekly Fares
 
-We were also concerned about the total weekly fares by city type from January 2019 until April 2019. First we had to use ``groupby()`` to sort for weekly fares by city type and date, creating a new data frame the limited our data to the aforementioned essentials. 
+We were also concerned about the total weekly fares by city type from January 2019 until April 2019. So first we had to use ``groupby()`` to sort for weekly fares by city type and date, creating a new data frame that limited our data to the aforementioned essentials. 
 
 	  Create a New DataFrame Showing Sum of Fares and Indexing for City Type & Date
 	  sum_fares_by_type = pyber_data_df.groupby([“type, “date”]).sum[“fare”]
 
-We then use this data to create a Pivot Table using ``pivot()`` to format our new data for clarity and visual appeal, and using ``loc()`` to limit our data from January 1, 2019 until April 29, 2019. 
+We then used this data to create a Pivot Table using ``pivot()`` to format our new data for clarity and visual appeal, and using ``loc()`` to limit our data from January 1, 2019 until April 29, 2019. 
 
 	  Reset the Index
 	  pyber_data_df = pyber_data_df.reset_index()
@@ -65,7 +65,7 @@ We then use this data to create a Pivot Table using ``pivot()`` to format our ne
 
 <img src="https://github.com/chrisknox97/pyber_analysis/blob/main/Tables/Pivot%20Table%20Fares%20by%20City%20Date.png" height="400">
 
-The result shows a table displaying each day’s daily fares by city type. But we still need to limit our intended scope to January 2019 through April 2019 and use our daily totals to calculate new weekly totals. 
+The result shows a table displaying each day’s daily fares by city type. But we still needed to limit our intended scope to January 2019 through April 2019 and ``resample()`` our dates into weeks. 
 
     Limit the Pivot Table Scope to Specified Dates
     jan_april_2019_fares_df = total_fares_pivot_table.loc[‘2019-01-01’ : ‘2019-04-29’]
@@ -76,7 +76,7 @@ The result shows a table displaying each day’s daily fares by city type. But w
 
 <img src="https://github.com/chrisknox97/pyber_analysis/blob/main/Tables/Pivot%20Table%20Fares%20Weekly.png"  height="400">
 
-By doing this, we now have the correct  data from which we can plot the total weekly fares by city type onto a multiple line chart. 
+By doing this, we now have the correct data from which we can plot the total weekly fares by city type onto a multiple line chart. 
 
 	Import graphing style from Matplotlib
 	from matplotlib import style
@@ -92,11 +92,11 @@ By doing this, we now have the correct  data from which we can plot the total we
 	
 ![Pyber Graph](https://github.com/chrisknox97/pyber_analysis/blob/main/Analysis/PyBer_fare_summary.png)
 
-By adding these features we see that, regardless of the month, Urban total weekly fares tend to be the highest, and Rural total weekly fares tend to be the lowest. The chart also shows that slight increases in total weekly fares across all city types in late February and slight decreases in Urban and Suburban fares around late March and early April. 
+By adding this portion of script we see that, regardless of the month, Urban total weekly fares tend to be the highest, and Rural total weekly fares tend to be the lowest. The chart also shows slight increases in total weekly fares across all city types in late February and slight decreases in Urban and Suburban fares around late March and early April. 
 
 ## Summary
 
-With all this data laid out before us, I there are some notable business recommendations to be made to the CEO of Pyber, they are as follows: 
+With all this data laid out before us, there are some notable business recommendations to be made to the CEO of Pyber, they are as follows: 
 
 ### Increase Pyber Marketing to Rural Regions
 
@@ -104,7 +104,7 @@ The Average Fare Per Ride in Rural Markets was approximately $34 versus $24 in U
 
 ### Implement Variable Demand-Based Pricing
 
-As seen in the multiple line chart above, we know that the Total Fares by City Type increase across all city types at the end of February. With this knowledge we charge premium prices during peak operating weeks such as these, as well as during peak operating times of each day.  Uber and Lyft already use variable pricing during busy and high-volume portions of the day, so doing so for weeks as well would not be unheard of for this industry. 
+As seen in the multiple line chart above, we know that the Total Fares by City Type increase across all city types at the end of February. With this knowledge, Pyber could charge premium prices during peak operating weeks such as these, as well as during peak operating times of each day.  Uber and Lyft already use variable pricing during busy and high-volume portions of the day, so doing so for weeks as well would not be unheard of for this industry. 
 
 ### Decrease Total Drivers in Urban Areas
 
