@@ -6,7 +6,7 @@
 
 ## Pyber Ride-Sharing Results
 
-### Calculating The Average Fares Per Rider & Per Driver
+### Calculating Average Fares
 
 To calculate the average fares per rider and per driver type, we first had to tabulate our total rides, total drivers, and total fares (sorting by city type) using ``groupy()`` against our data frames. The scripts for these tabulations are shown below: 
 
