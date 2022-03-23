@@ -24,7 +24,7 @@ The results of these tabulations found that the highest totals in each field wer
 <p float="left">
 
 <img src="https://github.com/chrisknox97/pyber_analysis/blob/main/Tables/Total%20Rides%20by%20City%20Type.png" width ="300" height="250">
-<img src="https://github.com/chrisknox97/pyber_analysis/blob/main/Tables/Total%20Drivers%20by%20City%20Type.png" width ="300" height="250">
+<img src="https://github.com/chrisknox97/pyber_analysis/blob/main/Tables/Total%20Drivers%20by%20City%20Type.png" width ="310" height="250">
 <img src="https://github.com/chrisknox97/pyber_analysis/blob/main/Tables/Total%20Fares%20by%20City%20Type.png" width ="300" height="250">
 	
 </p>
