@@ -63,7 +63,7 @@ We then use this data to create a Pivot Table using ``pivot()`` to format our ne
 	  Create a Pivot Table, Indexing for Date, With Columns for City Type & Fares as Values
 	  total_fares_pivot_table =pyber_data_df.pivot( index= ‘date’, columns= ‘type’, values= ‘fare’)
 
-<img src="https://github.com/chrisknox97/pyber_analysis/blob/main/Tables/Pivot%20Table%20Fares%20by%20City%20Date.png" height="500">
+<img src="https://github.com/chrisknox97/pyber_analysis/blob/main/Tables/Pivot%20Table%20Fares%20by%20City%20Date.png" height="400">
 
 The result shows a table displaying each day’s daily fares by city type. But we still need to limit our intended scope to January 2019 through April 2019 and use our daily totals to calculate new weekly totals. 
 
